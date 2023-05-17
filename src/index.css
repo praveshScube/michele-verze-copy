@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  scroll-behavior: smooth;
+}
+
+.loading-container {
+  position: fixed;
+}
+
+.loading {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: loading 2s linear forwards;
+  position: absolute;
+  top: 42%;
+  left: 46%;
+  opacity: 0;
+}
+
+.loading:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.loading:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.loading:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.loading:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.loading:nth-child(5) {
+  animation-delay: 1s;
+}
+
+@keyframes loading {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: .2;
+  }
+
+  25% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: .4;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: .6;
+  }
+
+  75% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: .8;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.hCalc {
+  height: calc(100vh + 72px);
+}
+
+.zoomAnimation {
+  position: fixed;
+  overflow: hidden;
+  border-radius: 50%;
+  opacity: .2;
+  animation: zoomAnimation 6s linear infinite;
+}
+
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(1.8, 1.8);
+  }
+
+  50% {
+    transform: scale(2, 2);
+  }
+
+  100% {
+    transform: scale(1.8, 1.8);
+  }
+}
+
+.clipText {
+  position: fixed;
+  width: 100%;
+  /* top: 40%;
+    left: 0%; */
+}
+
+.navItem {
+  position: relative;
+  animation: navAnimation 500ms linear forwards;
+  color: white;
+}
+
+@keyframes navAnimation {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateX(-24px);
+    opacity: .3;
+  }
+
+  40% {
+    transform: translateX(-18px);
+    opacity: .5;
+  }
+
+  60% {
+    transform: translateX(-12px);
+    opacity: .7;
+  }
+
+  80% {
+    transform: translateX(-6px);
+    opacity: .9;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.navItem:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.navItem:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.navItem:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.navItem:nth-child(4) {
+  animation-delay: 1.1s;
+}
+
+.navItem:nth-child(5) {
+  animation-delay: 1.3s;
+}
