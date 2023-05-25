@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import TheWhy from "./components/MicheleVerze/TheWhy";
 import Layout from "./Layout";
-import Home from "./components/MicheleVerze/Home";
+import Home from "./components/MicheleVerze/Home/Home";
 import TheLife from "./components/MicheleVerze/TheLife";
 
 const App = () => {
