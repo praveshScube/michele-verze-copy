@@ -73,12 +73,12 @@ const Home = () => {
                     scrollTrigger: {
                         trigger: '.pulseCircleWrap',
                         start: 'center center',
-                        endTrigger:'.test',
+                        endTrigger:'.videoTrig',
                         end: 'bottom bottom',
                         scrub: true,
                         pin: true,
                         pinSpacing: false,
-                        markers: true,
+                        // markers: true,
                         onLeave: ()=>{
                             gsap.to('.pulseCircleWrap',{
                                 opacity:0,
@@ -107,13 +107,12 @@ const Home = () => {
                         scrub: true,
                         pin: true,
                         pinSpacing: false,
-                        markers: true,
+                        // markers: true,
                     },
                 });
                 document.body.style.overflowX = "hidden";
             }, heroSectionRef)
         }
-
         return () => {
             clearTimeout(timer)
             ctx.revert();
@@ -146,11 +145,24 @@ const Home = () => {
                             <p className='pulseText absolute top-[20px] left-18 px-[10%] text-white text-5xl text-center'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit modi dolores esse vitae!
                             </p>
+                            {/* <div className='pulseCircleWrap h-screen w-full flex justify-center items-center'>
+                                <div className='pulseCircle mx-auto w-[240px] h-[240px] rounded-full bg-[#C6BFBC] '>
+                                   
+                                </div>
+                            </div>
+                            <div className='relative'>
+                            <div className='pulseText absolute top-1/3'>
+                            <p className=' w-[100vw] text-white text-7xl text-center font-serif'>
+                                        Searching for beauty in the tiniest detail to create magic in the bigger picture.
+                                    </p>
+                            </div>
+
+                            </div> */}
                         </div>
                 }
 
             </div>
-            <div className='test w-full h-screen px-8 pt-[50%]'>
+            <div className='videoTrig w-full h-screen px-8 pt-[50%]'>
                 <div className='flex justify-center items-center mb-10'>
                     <div id="reel" className="relative h-full w-full flex" style={{ clipPath: 'circle(140px at center)' }}>
                         <div className="w-56 sm:w-[280px] h-56 sm:h-[280px] m-auto rounded-full overflow-hidden" style={{ clipPath: 'circle(140px at center)' }}>
@@ -162,7 +174,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Projects/>
+            <Projects />
         </>
     )
 }
